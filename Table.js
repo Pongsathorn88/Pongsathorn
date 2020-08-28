@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Buuton} from 'antd';
+
 
 const TableHeader = () => {
   return (
@@ -19,7 +19,7 @@ const TableBody = (props) => {
         <td>{row.name}</td>
         <td>{row.job}</td>
         <td>
-    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+        <button onClick={() => props.removeCharacter(index)}>Delete</button>
   </td>
       </tr>
     )
@@ -28,9 +28,8 @@ const TableBody = (props) => {
   return <tbody>{rows}</tbody>
 }
 
-class Table extends Component {
-  render() {
-    const {characterData, removeCharacter} = props
+const Table = (props) => {
+  const  {characterData , removeCharacter} = props
 
     return (
       <table>
@@ -39,6 +38,6 @@ class Table extends Component {
     </table>
     )
     }
-  }
+  
 
 export default Table;
