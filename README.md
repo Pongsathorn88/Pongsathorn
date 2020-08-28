@@ -1,2 +1,2 @@
 # Pongsathorn
-Simple Componnent  Error code
+state 
