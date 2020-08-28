@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Table from './Table';
-import {Buuton} from 'antd';
 
 class App extends Component {
   state = {
-    characters [
+    characters : [
       {
         name: 'Charlie',
         job: 'Janitor',
@@ -23,21 +22,21 @@ class App extends Component {
         name: 'Dennis',
         job: 'Bartender',
       },
-    ],
+    ]
   }
-}
+
 
 removeCharacter = (index) => {
-  const {characters} = this.state
-
-  this.setState({
+   const {characters} = this.state
+  
+    this.setState({
     characters: characters.filter((character, i) => {
       return i !== index
     }),
   })
 }
 
-render() {
+render()  {
   const { characters } = this.state
 
   return (
@@ -46,6 +45,6 @@ render() {
     </div>
   )
 }
-
+}
 
 export default App;
