@@ -6,7 +6,7 @@ import {Buuton} from 'antd';
 
 class App extends Component {
   state = {
-    characters  
+    characters [
       {
         name: 'Charlie',
         job: 'Janitor',
@@ -27,14 +27,25 @@ class App extends Component {
   }
 }
 
+removeCharacter = (index) => {
+  const {characters} = this.state
 
-render () {
+  this.setState({
+    characters: characters.filter((character, i) => {
+      return i !== index
+    }),
+  })
+}
+
+render() {
   const { characters } = this.state
+
   return (
     <div className="container">
       <Table characterData={characters} removeCharacter={this.removeCharacter} />
     </div>
   )
 }
+
 
 export default App;
